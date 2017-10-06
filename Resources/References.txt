@@ -1,0 +1,5 @@
+SMTP Settings Page: 
+http://www.yetesoft.com/free-email-marketing-resources/pop-smtp-server-settings/
+
+MSDN Page: 
+https://msdn.microsoft.com/en-us/library/system.net.mail.smtpclient(v=vs.110).aspx
