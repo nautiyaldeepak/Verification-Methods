@@ -18,3 +18,6 @@ If you are using Gmail for sending the otp then there is 1 extra step.
 You will first has reduce the security of the Gmail Account.
 Check the Resources section of this Repo to reduce security OR go on the link: https://myaccount.google.com/lesssecureapps
 The lessSecureAppUse Feature should be "ON".
+
+# Executable File Available
+Use executable to run the program
