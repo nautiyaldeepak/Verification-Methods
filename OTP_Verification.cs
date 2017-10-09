@@ -26,8 +26,7 @@ namespace SMTP
 
         public static int SendEmail()
         {
-            Console.WriteLine("Enter Email for Sending OTP ");
-            string emailTo = Console.ReadLine();
+
 
             /*
              * 
@@ -45,8 +44,18 @@ namespace SMTP
             string otpA = numb.Substring(0, 3);
             string otpB = numb.Substring(3);
 
-            string emailFrom = "Enter the Email Here";
-            string password = "Enter Password";
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Enter the Reciever's Mail Id");
+            string emailTo = Console.ReadLine();
+            Console.WriteLine("Enter the Sender's Mail Id (Outlook Mail)");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("If Mail Id other than outlook then check the Readme");
+            Console.ForegroundColor = ConsoleColor.White;
+            string emailFrom = Console.ReadLine();
+            Console.WriteLine("Enter the Sender's Mail Id Password (Outlook Mail)");
+            string password = Console.ReadLine();
+            Console.WriteLine("Sneding otp to " + emailTo + " ........");
             string subject = "One Time Password";
             string body = otpA + " " + otpB;
 
