@@ -20,4 +20,4 @@ Check the Resources section of this Repo to reduce security OR go on the link: h
 The lessSecureAppUse Feature should be "ON".
 
 # Executable File Available
-Use executable to run the program
+Use SMPT.exe to execute the program
