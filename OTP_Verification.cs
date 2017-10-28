@@ -1,4 +1,5 @@
 ﻿// One Time Password Generation & Sending Via Email
+// Add Reference packages For SMTP Mail
 using System;
 using System.Net.Mail;
 using System.Net;
