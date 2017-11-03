@@ -60,20 +60,27 @@ namespace SMTP
             string subject = "One Time Password";
             string body = otpA + " " + otpB;
 
-            using (MailMessage mail = new MailMessage())
+            try
             {
-                mail.From = new MailAddress(emailFrom);
-                mail.To.Add(emailTo);
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.IsBodyHtml = true;
-
-                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                using (MailMessage mail = new MailMessage())
                 {
-                    smtp.Credentials = new NetworkCredential(emailFrom, password);
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
+                    mail.From = new MailAddress(emailFrom);
+                    mail.To.Add(emailTo);
+                    mail.Subject = subject;
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+
+                    using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                    {
+                        smtp.Credentials = new NetworkCredential(emailFrom, password);
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
                 }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
             return num;
         }
