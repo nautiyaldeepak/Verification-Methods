@@ -1,5 +1,7 @@
 ﻿// One Time Password Generation & Sending Via Email
 // Add Reference packages For SMTP Mail
+// This code is only for outlook
+// Customize as per the service
 using System;
 using System.Net.Mail;
 using System.Net;
